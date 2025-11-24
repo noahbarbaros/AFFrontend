@@ -11,7 +11,7 @@ const containerVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.4, 0, 0.2, 1],
+      ease: "easeOut" as const,
       staggerChildren: 0.1,
     },
   },
@@ -22,7 +22,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   },
 }
 
@@ -31,7 +31,7 @@ const linkVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] },
+    transition: { duration: 0.4, ease: "easeOut" as const },
   },
 }
 
@@ -41,7 +41,7 @@ const socialVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 200,
       damping: 10,
     },
@@ -55,7 +55,7 @@ const backgroundVariants = {
     scale: 1,
     transition: {
       duration: 2,
-      ease: [0.4, 0, 0.2, 1],
+      ease: "easeOut" as const,
     },
   },
 }
@@ -225,14 +225,14 @@ export default function StickyFooter() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
+              transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" as const }}
               className="flex flex-col md:flex-row justify-between items-start md:items-end relative z-10 gap-4 sm:gap-6 md:gap-6 mt-6 sm:mt-8 md:mt-12 flex-shrink-0"
             >
               <div className="flex-1 pb-4">
                 <motion.h1
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
+                  transition={{ delay: 1, duration: 0.8, ease: "easeOut" as const }}
                   whileHover={{
                     scale: 1.02,
                     transition: { type: "spring", stiffness: 300, damping: 20 },
