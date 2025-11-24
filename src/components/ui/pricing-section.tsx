@@ -72,8 +72,8 @@ export default function PricingSectionComponent() {
 	];
 
 	return (
-		<section id="pricing" className="bg-stone-50 py-20">
-			<div className="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8">
+		<section id="pricing" className="bg-stone-50 py-12 sm:py-16 md:py-20">
+			<div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-6 lg:px-8">
 				<PricingSection
 					plans={PLANS}
 					heading="Your Best Investment Yet"

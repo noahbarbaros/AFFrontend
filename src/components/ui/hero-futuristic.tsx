@@ -239,9 +239,9 @@ const HeroFuturistic = () => {
   return (
     <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 overflow-hidden">
       {/* Text Column - Left (Top on Mobile) */}
-      <div className="flex flex-col justify-center px-6 md:px-20 relative z-10 h-full">
+      <div className="flex flex-col justify-center px-4 sm:px-6 md:px-12 lg:px-20 py-8 md:py-0 relative z-10 h-full">
         <div className="text-left max-w-2xl">
-          <div className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold text-black tracking-tight leading-tight">
+          <div className="text-2xl sm:text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold text-black tracking-tight leading-tight">
             <div
               className={`transition-opacity duration-700 ${titleVisible ? 'opacity-100' : 'opacity-0'}`}
               style={{ fontFamily: 'sans-serif' }}
@@ -271,11 +271,11 @@ const HeroFuturistic = () => {
               {subtitle}
             </div>
           </div>
-          <div className="flex items-center gap-3 mt-8 md:mt-10">
-            <ShinyButton className="!px-5 !py-2.5 md:!px-6 md:!py-3 !text-sm md:!text-base">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-6 sm:mt-8 md:mt-10">
+            <ShinyButton className="!px-5 !py-2.5 md:!px-6 md:!py-3 !text-sm md:!text-base w-full sm:w-auto">
               Start free trial
             </ShinyButton>
-            <button className="text-black px-5 py-2.5 md:px-6 md:py-3 rounded-full font-medium text-sm md:text-base hover:bg-gray-100 transition-colors duration-200">
+            <button className="text-black px-5 py-2.5 md:px-6 md:py-3 rounded-full font-medium text-sm md:text-base hover:bg-gray-100 transition-colors duration-200 w-full sm:w-auto">
               Log in
             </button>
           </div>
@@ -283,7 +283,7 @@ const HeroFuturistic = () => {
       </div>
 
       {/* Canvas Column - Right (Bottom on Mobile) */}
-      <div className="relative h-[60vh] md:h-full w-full flex items-center justify-center">
+      <div className="relative h-[40vh] sm:h-[50vh] md:h-full w-full flex items-center justify-center">
         <Canvas
           flat
           className="w-full h-full"

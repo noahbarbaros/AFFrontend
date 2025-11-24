@@ -48,7 +48,7 @@ export default function FeaturesObjections() {
 
         {/* Objections Section */}
         <div className="border-t border-gray-200 pt-16 md:pt-24">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-black mb-4 text-center">
             Common Questions
           </h2>
           <p className="text-lg md:text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12">
@@ -63,7 +63,7 @@ export default function FeaturesObjections() {
                 open={index === 0}
               >
                 <summary className="flex w-full cursor-pointer items-center justify-between px-6 py-5 text-left">
-                  <span className="text-lg font-semibold text-gray-900">
+                  <span className="text-lg font-normal text-gray-900">
                     {faq.question}
                   </span>
                   <span className="ml-4 flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-gray-50 text-gray-600 transition group-open:rotate-45">

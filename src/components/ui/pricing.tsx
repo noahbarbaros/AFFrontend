@@ -68,7 +68,7 @@ export function PricingSection({
 			{...props}
 		>
 			<div className="mx-auto max-w-xl space-y-2">
-				<h2 className="text-center text-2xl font-bold tracking-tight text-gray-900 md:text-3xl lg:text-4xl">
+				<h2 className="text-center text-2xl font-normal tracking-tight text-gray-900 md:text-3xl lg:text-4xl">
 					{heading}
 				</h2>
 				{description && (
@@ -81,7 +81,7 @@ export function PricingSection({
 				frequency={frequency}
 				setFrequency={setFrequency}
 			/>
-			<div className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
+			<div className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3">
 				{plans.map((plan) => (
 					<PricingCard plan={plan} key={plan.name} frequency={frequency} />
 				))}
@@ -147,7 +147,7 @@ export function PricingCard({
 		<div
 			key={plan.name}
 			className={cn(
-				'relative flex w-full flex-col rounded-lg border border-gray-200 bg-white overflow-hidden',
+				'relative flex w-full flex-col rounded-lg border border-gray-200 bg-white overflow-hidden min-h-0',
 				className,
 			)}
 			{...props}
@@ -163,7 +163,7 @@ export function PricingCard({
 			)}
 			<div
 				className={cn(
-					'bg-white rounded-t-lg border-b p-6',
+					'bg-white rounded-t-lg border-b p-4 sm:p-6',
 					plan.highlighted && 'bg-gray-50',
 				)}
 			>
@@ -187,15 +187,15 @@ export function PricingCard({
 					)}
 				</div>
 
-				<div className="text-xl font-semibold text-gray-900">{plan.name}</div>
-				<p className="text-gray-600 text-base font-normal mt-1">{plan.info}</p>
-				<h3 className="mt-4 flex items-end gap-1">
+				<div className="text-lg sm:text-xl font-normal text-gray-900">{plan.name}</div>
+				<p className="text-gray-600 text-sm sm:text-base font-normal mt-1">{plan.info}</p>
+				<h3 className="mt-3 sm:mt-4 flex items-end gap-1">
 					{plan.name === 'Enterprise' ? (
-						<span className="text-4xl font-bold text-gray-900">Custom</span>
+						<span className="text-3xl sm:text-4xl font-normal text-gray-900">Custom</span>
 					) : (
 						<>
-							<span className="text-4xl font-bold text-gray-900">${plan.price[frequency]}</span>
-							<span className="text-gray-600 text-xl mb-1">
+							<span className="text-3xl sm:text-4xl font-normal text-gray-900">${plan.price[frequency]}</span>
+							<span className="text-gray-600 text-lg sm:text-xl mb-1">
 								{plan.name !== 'Free'
 									? '/' + (frequency === 'monthly' ? 'month' : 'year')
 									: ''}
@@ -206,7 +206,7 @@ export function PricingCard({
 			</div>
 			<div
 				className={cn(
-					'bg-white space-y-5 px-6 py-8 text-base',
+					'bg-white space-y-4 sm:space-y-5 px-4 sm:px-6 py-6 sm:py-8 text-sm sm:text-base',
 					plan.highlighted && 'bg-gray-50',
 				)}
 			>
@@ -238,7 +238,7 @@ export function PricingCard({
 			</div>
 			<div
 				className={cn(
-					'mt-auto w-full border-t p-5 bg-white',
+					'mt-auto w-full border-t p-4 sm:p-5 bg-white',
 					plan.highlighted && 'bg-gray-50',
 				)}
 			>

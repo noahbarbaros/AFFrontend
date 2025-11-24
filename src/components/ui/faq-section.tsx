@@ -47,13 +47,13 @@ const faqs = [
 
 export default function FAQSection() {
 	return (
-		<section className="bg-stone-50 py-20">
-			<div className="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8">
-				<div className="mx-auto max-w-xl space-y-2 mb-12">
-					<h2 className="text-center text-2xl font-bold tracking-tight text-gray-900 md:text-3xl lg:text-4xl">
+		<section className="bg-stone-50 py-12 sm:py-16 md:py-20">
+			<div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-6 lg:px-8">
+				<div className="mx-auto max-w-xl space-y-2 mb-8 sm:mb-12">
+					<h2 className="text-center text-xl sm:text-2xl font-normal tracking-tight text-gray-900 md:text-3xl lg:text-4xl">
 						Frequently Asked Questions
 					</h2>
-					<p className="text-gray-600 text-center text-sm md:text-base">
+					<p className="text-gray-600 text-center text-xs sm:text-sm md:text-base px-4">
 						Everything you need to know about our pricing and plans. Further questions? Contact us at hello@aflabs.ai
 					</p>
 				</div>
@@ -66,8 +66,8 @@ export default function FAQSection() {
 								className="group border-b-2 border-gray-200 last:border-b-0 [&_summary::-webkit-details-marker]:hidden"
 								open={index === 0}
 							>
-								<summary className="flex w-full cursor-pointer items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors">
-									<span className="text-base md:text-lg font-semibold text-gray-900 pr-4">
+								<summary className="flex w-full cursor-pointer items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left hover:bg-gray-50 transition-colors">
+									<span className="text-sm sm:text-base md:text-lg font-normal text-gray-900 pr-4">
 										{faq.question}
 									</span>
 									<span className="ml-4 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-gray-200 bg-gray-50 text-gray-600 transition group-open:rotate-45 group-open:bg-[#1d40b0] group-open:text-white group-open:border-[#1d40b0]">
@@ -87,7 +87,7 @@ export default function FAQSection() {
 										</svg>
 									</span>
 								</summary>
-								<div className="px-6 pb-6 text-sm md:text-base text-gray-600 leading-relaxed">
+								<div className="px-4 sm:px-6 pb-4 sm:pb-6 text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
 									{faq.answer}
 								</div>
 							</details>

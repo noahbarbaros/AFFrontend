@@ -11,7 +11,7 @@ const containerVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: "easeOut",
+      ease: [0.4, 0, 0.2, 1],
       staggerChildren: 0.1,
     },
   },
@@ -22,7 +22,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
   },
 }
 
@@ -31,7 +31,7 @@ const linkVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: "easeOut" },
+    transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] },
   },
 }
 
@@ -55,7 +55,7 @@ const backgroundVariants = {
     scale: 1,
     transition: {
       duration: 2,
-      ease: "easeOut",
+      ease: [0.4, 0, 0.2, 1],
     },
   },
 }
@@ -178,7 +178,7 @@ export default function StickyFooter() {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="bg-white py-12 md:py-16 px-4 md:px-12 w-full flex flex-col justify-between relative overflow-visible"
+        className="bg-white py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 w-full flex flex-col justify-between relative overflow-visible"
       >
             {/* Animated Background Elements */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none" />
@@ -214,7 +214,7 @@ export default function StickyFooter() {
 
             {/* Navigation Section */}
             <motion.div variants={containerVariants} className="relative z-10 flex-shrink-0">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12 lg:gap-20">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-12 lg:gap-20">
                 {footerData.sections.map((section, index) => (
                   <NavSection key={section.title} title={section.title} links={section.links} index={index} />
                 ))}
@@ -226,7 +226,7 @@ export default function StickyFooter() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
-              className="flex flex-col md:flex-row justify-between items-start md:items-end relative z-10 gap-4 md:gap-6 mt-8 md:mt-12 flex-shrink-0"
+              className="flex flex-col md:flex-row justify-between items-start md:items-end relative z-10 gap-4 sm:gap-6 md:gap-6 mt-6 sm:mt-8 md:mt-12 flex-shrink-0"
             >
               <div className="flex-1 pb-4">
                 <motion.h1
@@ -237,7 +237,7 @@ export default function StickyFooter() {
                     scale: 1.02,
                     transition: { type: "spring", stiffness: 300, damping: 20 },
                   }}
-                  className="text-[12vw] md:text-[10vw] lg:text-[8vw] xl:text-[6vw] leading-[1.1] font-serif bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900/60 bg-clip-text text-transparent cursor-default pb-2"
+                  className="text-[10vw] sm:text-[8vw] md:text-[10vw] lg:text-[8vw] xl:text-[6vw] leading-[1.1] font-serif bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900/60 bg-clip-text text-transparent cursor-default pb-2"
                   style={{ paddingBottom: '0.25rem' }}
                 >
                   {footerData.title}

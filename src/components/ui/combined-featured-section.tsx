@@ -27,16 +27,16 @@ export default function CombinedFeaturedSection() {
   };
 
   return (
-    <section id="features" className="bg-stone-50 py-20">
-      <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-6 px-6 md:grid-cols-2 md:grid-rows-2">
+    <section id="features" className="bg-stone-50 py-12 sm:py-16 md:py-20">
+      <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-4 sm:gap-6 px-4 sm:px-6 md:grid-cols-2 md:grid-rows-2">
         {/* Crawl Animation */}
-        <div className="relative border border-gray-200 bg-white p-6 shadow-sm overflow-hidden">
+        <div className="relative border border-gray-200 bg-white p-4 sm:p-6 shadow-sm overflow-hidden">
           <div className="mb-4 flex items-center gap-2 text-sm text-gray-500">
             <Files className="h-4 w-4" />
             Crawl
           </div>
-          <h3 className="text-xl font-semibold text-gray-900">Crawl your entire domain autonomously.</h3>
-          <p className="mt-2 text-sm text-gray-600">
+          <h3 className="text-lg sm:text-xl font-normal text-gray-900">Crawl your entire domain autonomously.</h3>
+          <p className="mt-2 text-xs sm:text-sm text-gray-600">
             We scan every URL, heading, metadata field, and content block to extract the authoritative topics your
             product owns.
           </p>
@@ -47,13 +47,13 @@ export default function CombinedFeaturedSection() {
         </div>
 
         {/* Featured case study */}
-        <div className="flex flex-col justify-between gap-4 border border-gray-200 bg-white p-6 shadow-sm overflow-visible">
+        <div className="flex flex-col justify-between gap-4 border border-gray-200 bg-white p-4 sm:p-6 shadow-sm overflow-visible">
           <div>
             <span className="flex items-center gap-2 text-xs font-medium text-gray-500">
             <GalleryVerticalEnd className="h-4 w-4" /> Expand
             </span>
-            <h3 className="mt-3 text-xl font-semibold text-gray-900">Generate every question people could ask.</h3>
-            <p className="mt-2 text-sm text-gray-600">
+            <h3 className="mt-3 text-lg sm:text-xl font-normal text-gray-900">Generate every question people could ask.</h3>
+            <p className="mt-2 text-xs sm:text-sm text-gray-600">
               LLM-based fan-out explores the entire question space, then we score and filter it down to the
               highest-signal candidates.
             </p>
@@ -102,7 +102,7 @@ export default function CombinedFeaturedSection() {
             <Activity className="h-4 w-4" />
             Validate
           </div>
-          <h3 className="text-xl font-semibold text-gray-900">Validate with real search-volume data.</h3>
+          <h3 className="text-lg sm:text-xl font-normal text-gray-900">Validate with real search-volume data.</h3>
           <p className="mt-2 text-sm text-gray-600">
             Google Ads, DataForSEO, and proprietary APIs confirm what people actually search for—no guessing.
           </p>
@@ -110,7 +110,7 @@ export default function CombinedFeaturedSection() {
         </div>
 
         {/* Feature cards */}
-        <div className="grid gap-6 bg-stone-50 sm:grid-cols-2">
+        <div className="grid gap-4 sm:gap-6 bg-stone-50 sm:grid-cols-2">
           <FeatureCard
             icon={<Files className="h-4 w-4" />}
             image="/clusterex.png"
@@ -141,17 +141,17 @@ type FeatureCardProps = {
 
 function FeatureCard({ icon, image, title, subtitle, description }: FeatureCardProps) {
   return (
-    <div className="relative flex flex-col gap-3 border border-gray-200 bg-white p-4 shadow-sm transition">
+    <div className="relative flex flex-col gap-2 sm:gap-3 border border-gray-200 bg-white p-3 sm:p-4 shadow-sm transition">
       <div>
         <span className="mb-4 flex items-center gap-2 text-xs font-medium text-gray-500">
           {icon}
           {title}
         </span>
-        <h3 className="text-lg font-semibold text-gray-900">{subtitle}</h3>
-        <p className="text-sm text-gray-600">{description}</p>
+        <h3 className="text-base sm:text-lg font-normal text-gray-900">{subtitle}</h3>
+        <p className="text-xs sm:text-sm text-gray-600">{description}</p>
       </div>
 
-      <div className="absolute bottom-0 right-0 h-48 w-56 overflow-hidden rounded-xl sm:h-56 sm:w-64 md:h-64 md:w-72">
+      <div className="absolute bottom-0 right-0 h-32 w-40 sm:h-48 sm:w-56 md:h-56 md:w-64 lg:h-64 lg:w-72 overflow-hidden rounded-xl">
         <div className="relative h-full w-full">
           <Image src={image} alt={title} fill className="object-cover object-left rounded-xl" sizes="288px" />
         </div>
