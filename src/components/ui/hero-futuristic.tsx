@@ -217,6 +217,7 @@ const HeroFuturistic = () => {
   const subtitle = 'Generative Engine Optimization to grow systems that scale with you.';
   const [titleVisible, setTitleVisible] = useState(false);
   const [subtitleVisible, setSubtitleVisible] = useState(false);
+  const [buttonsVisible, setButtonsVisible] = useState(false);
   const [subtitleDelay, setSubtitleDelay] = useState(0);
 
   useEffect(() => {
@@ -231,10 +232,17 @@ const HeroFuturistic = () => {
 
   useEffect(() => {
     if (titleVisible) {
-      const timeout = setTimeout(() => setSubtitleVisible(true), 800);
+      const timeout = setTimeout(() => setSubtitleVisible(true), 600);
       return () => clearTimeout(timeout);
     }
   }, [titleVisible]);
+
+  useEffect(() => {
+    if (subtitleVisible) {
+      const timeout = setTimeout(() => setButtonsVisible(true), 400);
+      return () => clearTimeout(timeout);
+    }
+  }, [subtitleVisible]);
 
   return (
     <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 overflow-hidden">
@@ -271,7 +279,12 @@ const HeroFuturistic = () => {
               {subtitle}
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-6 sm:mt-8 md:mt-10">
+          <div 
+            className={`flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-6 sm:mt-8 md:mt-10 transition-opacity duration-700 ${buttonsVisible ? 'opacity-100' : 'opacity-0'}`}
+            style={{
+              transitionDelay: buttonsVisible ? '0.2s' : '0s'
+            }}
+          >
             <ShinyButton className="!px-5 !py-2.5 md:!px-6 md:!py-3 !text-sm md:!text-base w-full sm:w-auto">
               Start free trial
             </ShinyButton>
