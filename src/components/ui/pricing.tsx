@@ -55,10 +55,6 @@ export function PricingSection({
 	description,
 	...props
 }: PricingSectionProps) {
-	const [frequency, setFrequency] = React.useState<'monthly' | 'yearly'>(
-		'monthly',
-	);
-
 	return (
 		<div
 			className={cn(
@@ -77,13 +73,9 @@ export function PricingSection({
 					</p>
 				)}
 			</div>
-			<PricingFrequencyToggle
-				frequency={frequency}
-				setFrequency={setFrequency}
-			/>
 			<div className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3">
 				{plans.map((plan) => (
-					<PricingCard plan={plan} key={plan.name} frequency={frequency} />
+					<PricingCard plan={plan} key={plan.name} />
 				))}
 			</div>
 		</div>
@@ -132,15 +124,14 @@ export function PricingFrequencyToggle({
 
 type PricingCardProps = React.ComponentProps<'div'> & {
 	plan: Plan;
-	frequency?: FREQUENCY;
 };
 
 export function PricingCard({
 	plan,
 	className,
-	frequency = frequencies[0],
 	...props
 }: PricingCardProps) {
+	const frequency = 'monthly';
 	const [isCalendlyOpen, setIsCalendlyOpen] = React.useState(false);
 
 	return (
@@ -174,17 +165,6 @@ export function PricingCard({
 							Popular
 						</p>
 					)}
-					{frequency === 'yearly' && (
-						<p className="bg-[#1d40b0] text-white flex items-center gap-1 rounded-md border border-[#1d40b0] px-2.5 py-1 text-xs font-medium">
-							{Math.round(
-								((plan.price.monthly * 12 - plan.price.yearly) /
-									plan.price.monthly /
-									12) *
-									100,
-							)}
-							% off
-						</p>
-					)}
 				</div>
 
 				<div className="text-lg sm:text-xl font-normal text-gray-900">{plan.name}</div>
@@ -196,9 +176,7 @@ export function PricingCard({
 						<>
 							<span className="text-3xl sm:text-4xl font-normal text-gray-900">${plan.price[frequency]}</span>
 							<span className="text-gray-600 text-lg sm:text-xl mb-1">
-								{plan.name !== 'Free'
-									? '/' + (frequency === 'monthly' ? 'month' : 'year')
-									: ''}
+								{plan.name !== 'Free' ? '/month' : ''}
 							</span>
 						</>
 					)}

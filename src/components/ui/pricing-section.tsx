@@ -18,7 +18,7 @@ export default function PricingSectionComponent() {
 				{ text: 'Up to 50 keyword research queries' },
 				{ text: '1 competitor analysis' },
 				{ text: 'No blog templates' },
-				{ text: 'Standard SEO' },
+				{ text: 'Standard GEO' },
 				{ text: 'Basic support' },
 			],
 			btn: {
@@ -40,7 +40,7 @@ export default function PricingSectionComponent() {
 				{ text: 'Up to 500 keyword research queries per month' },
 				{ text: 'Up to 20 competitor analyses per month' },
 				{ text: 'All blog templates (including comparison, custom templates)' },
-				{ text: 'Advanced SEO optimization (clustering, long-tail keyword generation, PAA questions)' },
+				{ text: 'Advanced GEO (clustering, long-tail keyword generation, PAA questions)' },
 				{ text: 'Priority support' },
 				{ text: 'Custom keyword research' },
 			],
