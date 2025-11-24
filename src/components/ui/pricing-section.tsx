@@ -72,7 +72,7 @@ export default function PricingSectionComponent() {
 	];
 
 	return (
-		<section className="bg-stone-50 py-20">
+		<section id="pricing" className="bg-stone-50 py-20">
 			<div className="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8">
 				<PricingSection
 					plans={PLANS}

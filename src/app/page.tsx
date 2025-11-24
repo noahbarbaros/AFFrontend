@@ -5,6 +5,7 @@ import TrustedBy from "@/components/ui/trusted-by";
 import { Navbar1 } from "@/components/ui/navbar-1";
 import PricingSectionComponent from "@/components/ui/pricing-section";
 import FAQSection from "@/components/ui/faq-section";
+import StickyFooter from "@/components/ui/footer";
 
 export default function Home() {
   return (
@@ -32,6 +33,18 @@ export default function Home() {
       
       <PricingSectionComponent />
       <FAQSection />
+      
+      {/* Footer Section */}
+      <div className="h-screen flex items-center justify-center bg-gradient-to-br from-stone-50 via-gray-50 to-stone-50 px-4">
+        <div className="text-center">
+          <h2 className="leading-none font-serif text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900/60 mb-6 text-2xl md:text-4xl">
+            Show up where it matters most.
+          </h2>
+          <div className="w-16 md:w-24 h-0.5 bg-gradient-to-r from-[#1d40b0] to-[#1d40b0]/60 mx-auto"></div>
+        </div>
+      </div>
+      
+      <StickyFooter />
     </main>
   );
 }

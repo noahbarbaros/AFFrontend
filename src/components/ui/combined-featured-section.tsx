@@ -27,7 +27,7 @@ export default function CombinedFeaturedSection() {
   };
 
   return (
-    <section className="bg-stone-50 py-20">
+    <section id="features" className="bg-stone-50 py-20">
       <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-6 px-6 md:grid-cols-2 md:grid-rows-2">
         {/* Crawl Animation */}
         <div className="relative border border-gray-200 bg-white p-6 shadow-sm overflow-hidden">
