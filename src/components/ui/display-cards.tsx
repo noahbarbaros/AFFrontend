@@ -25,7 +25,7 @@ function DisplayCard({
   return (
     <div
       className={cn(
-        "relative flex h-36 w-[20rem] -skew-y-[8deg] select-none flex-col justify-between rounded-xl border-2 bg-white/90 backdrop-blur-sm px-4 py-3 transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[18rem] after:bg-gradient-to-l after:from-white after:to-transparent after:content-[''] hover:border-blue-200 hover:bg-white [&>*]:flex [&>*]:items-center [&>*]:gap-2",
+        "relative flex h-32 w-full max-w-[18rem] sm:h-36 sm:max-w-[20rem] -skew-y-[6deg] select-none flex-col justify-between rounded-xl border-2 bg-white/90 backdrop-blur-sm px-3 py-2.5 sm:px-4 sm:py-3 transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[115%] after:w-[14rem] sm:after:w-[18rem] after:bg-gradient-to-l after:from-white after:to-transparent after:content-[''] hover:border-blue-200 hover:bg-white [&>*]:flex [&>*]:items-center [&>*]:gap-2",
         className
       )}
     >
@@ -61,7 +61,7 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
   const displayCards = cards || defaultCards;
 
   return (
-    <div className="relative min-h-[240px] w-full overflow-visible">
+    <div className="relative w-full overflow-visible pt-6 sm:pt-2 min-h-[220px] sm:min-h-[260px]">
       <div className="grid [grid-template-areas:'stack'] place-items-center opacity-100 animate-in fade-in-0 duration-700">
         {displayCards.map((cardProps, index) => (
           <DisplayCard key={index} {...cardProps} />

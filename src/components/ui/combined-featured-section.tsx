@@ -57,7 +57,7 @@ export default function CombinedFeaturedSection() {
               LLMs find content via query fan-out. We make sure you cover every question both your customers, and LLMs ask.
             </p>
           </div>
-          <div className="flex w-full items-center justify-center">
+          <div className="flex w-full items-center justify-center mt-6 sm:mt-4 px-2 mb-6 sm:mb-0">
             <DisplayCards
               cards={[
                 {
@@ -68,7 +68,7 @@ export default function CombinedFeaturedSection() {
                   iconClassName: "text-blue-500",
                   titleClassName: "text-blue-500",
                   className:
-                    "[grid-area:stack] hover:-translate-y-8 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/40 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                    "[grid-area:stack] hover:-translate-y-8 max-sm:hover:-translate-y-4 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/40 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
                 },
                 {
                   icon: <Sparkles className="size-4 text-blue-300" />,
@@ -78,7 +78,7 @@ export default function CombinedFeaturedSection() {
                   iconClassName: "text-blue-500",
                   titleClassName: "text-blue-500",
                   className:
-                    "[grid-area:stack] translate-x-12 translate-y-8 hover:-translate-y-2 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/40 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                    "[grid-area:stack] translate-x-6 translate-y-6 sm:translate-x-12 sm:translate-y-8 hover:-translate-y-2 max-sm:hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/40 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
                 },
                 {
                   icon: <Sparkles className="size-4 text-blue-300" />,
@@ -88,7 +88,7 @@ export default function CombinedFeaturedSection() {
                   iconClassName: "text-blue-500",
                   titleClassName: "text-blue-500",
                   className:
-                    "[grid-area:stack] translate-x-24 translate-y-16 hover:translate-y-8",
+                    "[grid-area:stack] translate-x-12 translate-y-10 sm:translate-x-24 sm:translate-y-16 hover:translate-y-6 sm:hover:translate-y-8",
                 },
               ]}
             />
@@ -140,8 +140,8 @@ type FeatureCardProps = {
 
 function FeatureCard({ icon, image, title, subtitle, description }: FeatureCardProps) {
   return (
-    <div className="relative flex flex-col gap-2 sm:gap-3 border border-gray-200 bg-white p-3 sm:p-4 shadow-sm transition">
-      <div>
+    <div className="relative flex flex-col gap-2 sm:gap-3 border border-gray-200 bg-white p-3 sm:p-4 shadow-sm transition overflow-hidden pb-32 sm:pb-4">
+      <div className="relative z-10">
         <span className="mb-4 flex items-center gap-2 text-xs font-medium text-gray-500">
           {icon}
           {title}
@@ -150,9 +150,15 @@ function FeatureCard({ icon, image, title, subtitle, description }: FeatureCardP
         <p className="text-xs sm:text-sm text-gray-600">{description}</p>
       </div>
 
-      <div className="absolute bottom-0 right-0 h-32 w-40 sm:h-48 sm:w-56 md:h-56 md:w-64 lg:h-64 lg:w-72 overflow-hidden rounded-xl">
+      <div className="mt-4 h-40 w-full overflow-hidden rounded-xl sm:absolute sm:bottom-3 sm:right-3 sm:h-40 sm:w-48 md:h-48 md:w-60 lg:h-56 lg:w-72">
         <div className="relative h-full w-full">
-          <Image src={image} alt={title} fill className="object-cover object-left rounded-xl" sizes="288px" />
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover object-left rounded-xl"
+            sizes="(max-width: 640px) 100vw, 288px"
+          />
         </div>
       </div>
     </div>
