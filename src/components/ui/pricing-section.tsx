@@ -25,6 +25,7 @@ export default function PricingSectionComponent() {
 				text: 'Start Free Trial',
 				href: 'https://dashboard.antifragility.app/',
 			},
+			betaNote: 'Beta launch: free to use',
 		},
 		{
 			highlighted: true,
@@ -48,6 +49,7 @@ export default function PricingSectionComponent() {
 				text: 'Get Started',
 				href: 'https://dashboard.antifragility.app/',
 			},
+			betaNote: 'Beta launch: free to use',
 		},
 		{
 			id: 'custom',
@@ -68,6 +70,7 @@ export default function PricingSectionComponent() {
 				href: 'https://calendly.com/noah-aflabs/30min',
 				isCalendly: true,
 			},
+			betaNote: 'Founding partners onboarded free',
 		},
 	];
 
@@ -77,7 +80,7 @@ export default function PricingSectionComponent() {
 				<PricingSection
 					plans={PLANS}
 					heading="Your Best Investment Yet"
-					description="Whether you're just starting out or growing fast, our flexible pricing has you covered — with no hidden costs."
+					description="We’re in beta launch, so every plan is free while we onboard founding teams — lock in your spot before pricing goes live."
 				/>
 			</div>
 		</section>

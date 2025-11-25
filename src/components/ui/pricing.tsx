@@ -41,6 +41,7 @@ interface Plan {
 		isCalendly?: boolean;
 	};
 	highlighted?: boolean;
+	betaNote?: string;
 }
 
 interface PricingSectionProps extends React.ComponentProps<'div'> {
@@ -169,18 +170,33 @@ export function PricingCard({
 
 				<div className="text-lg sm:text-xl font-normal text-gray-900">{plan.name}</div>
 				<p className="text-gray-600 text-sm sm:text-base font-normal mt-1">{plan.info}</p>
+				{/*
+					Add a subtle strikethrough line for paid plans during beta to visually
+					reinforce that the listed price is waived.
+				*/}
 				<h3 className="mt-3 sm:mt-4 flex items-end gap-1">
 					{plan.name === 'Enterprise' ? (
 						<span className="text-3xl sm:text-4xl font-normal text-gray-900">Custom</span>
 					) : (
-						<>
+						<span
+							className={cn(
+								'relative inline-flex items-end gap-1',
+								plan.betaNote &&
+									'before:absolute before:inset-x-0 before:top-1/2 before:h-0.5 before:bg-black/70 before:content-[\'\']',
+							)}
+						>
 							<span className="text-3xl sm:text-4xl font-normal text-gray-900">${plan.price[frequency]}</span>
 							<span className="text-gray-600 text-lg sm:text-xl mb-1">
 								{plan.name !== 'Free' ? '/month' : ''}
 							</span>
-						</>
+						</span>
 					)}
 				</h3>
+				{plan.betaNote && (
+					<p className="mt-2 inline-flex items-center rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium px-3 py-1">
+						{plan.betaNote}
+					</p>
+				)}
 			</div>
 			<div
 				className={cn(
@@ -246,18 +262,18 @@ export function PricingCard({
 						/>
 					</>
 				) : (
-					<Button
-						className={cn(
-							"w-full py-3 text-base font-medium",
-							plan.highlighted 
+				<Button
+					className={cn(
+						"w-full py-3 text-base font-medium",
+						plan.highlighted 
 								? "bg-[#1d40b0] text-white hover:bg-[#1a3a9e] hover:text-white" 
 								: "bg-white border-gray-300 text-gray-900 hover:bg-gray-50 hover:text-gray-900"
-						)}
-						variant={plan.highlighted ? 'default' : 'outline'}
-						asChild
-					>
-						<Link href={plan.btn.href}>{plan.btn.text}</Link>
-					</Button>
+					)}
+					variant={plan.highlighted ? 'default' : 'outline'}
+					asChild
+				>
+					<Link href={plan.btn.href}>{plan.btn.text}</Link>
+				</Button>
 				)}
 			</div>
 		</div>

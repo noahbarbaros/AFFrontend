@@ -54,8 +54,7 @@ export default function CombinedFeaturedSection() {
             </span>
             <h3 className="mt-3 text-lg sm:text-xl font-normal text-gray-900">Generate every question people could ask.</h3>
             <p className="mt-2 text-xs sm:text-sm text-gray-600">
-              LLM-based fan-out explores the entire question space, then we score and filter it down to the
-              highest-signal candidates.
+              LLMs find content via query fan-out. We make sure you cover every question both your customers, and LLMs ask.
             </p>
           </div>
           <div className="flex w-full items-center justify-center">
@@ -102,9 +101,9 @@ export default function CombinedFeaturedSection() {
             <Activity className="h-4 w-4" />
             Validate
           </div>
-          <h3 className="text-lg sm:text-xl font-normal text-gray-900">Validate with real search-volume data.</h3>
+          <h3 className="text-lg sm:text-xl font-normal text-gray-900">Create with real search-volume data.</h3>
           <p className="mt-2 text-sm text-gray-600">
-            Google Ads, DataForSEO, and proprietary APIs confirm what people actually search for—no guessing.
+            We find out what your customers ask most. Then we use volume-backed prompts to build content that actually drives revenue.
           </p>
           <MonitoringChart />
         </div>
@@ -116,14 +115,14 @@ export default function CombinedFeaturedSection() {
             image="/clusterex.png"
             title="Cluster"
             subtitle="Embeddings + Clustering"
-            description="We group validated keywords into content blueprints, briefs, and ready-to-ship outlines."
+            description="We group high-volume keywords under topic umbrellas to get you visible everywhere."
           />
           <FeatureCard
             icon={<Flower className="h-4 w-4" />}
             image="/blogex.png"
             title="Automate"
-            subtitle="Self-updating engine"
-            description="We turn the pipeline into a GEO/SEO engine that ships ideas, drafts, and insights automatically."
+            subtitle="AI Blog Generation"
+            description="Generate AI-optimized articles inside the dashboard with clean HTML for technical SEO, AI-formatted copy, and on-brand images."
           />
         </div>
       </div>
