@@ -49,7 +49,6 @@ export default function PricingSectionComponent() {
 				text: 'Get Started',
 				href: 'https://dashboard.antifragility.app/',
 			},
-			betaNote: 'Beta launch: free to use',
 		},
 		{
 			id: 'custom',
