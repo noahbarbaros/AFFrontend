@@ -75,25 +75,9 @@ const Navbar1 = () => {
         transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
       >
             <div className="flex items-center">
-              <motion.div
-                className="mr-3"
-                initial={{ scale: 0.95 }}
-                animate={{ scale: 1 }}
-                whileHover={{ rotate: 4, scale: 1.03 }}
-                transition={{ duration: 0.25 }}
-              >
-                <Image
-                  src="/logo1.png"
-                  alt="Brand logo"
-                  width={48}
-                  height={48}
-                  priority
-                  className="h-10 w-10 rounded-full object-cover"
-                />
-              </motion.div>
             </div>
 
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[47%]">
+            <div className="absolute left-1/8 top-1/2 -translate-x-1/2 -translate-y-[47%]">
               <Image
                 src="/header.png"
                 alt="Antifragility Labs"
