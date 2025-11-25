@@ -14,7 +14,7 @@ export default function PricingSectionComponent() {
 				yearly: Math.round(49 * 12 * (1 - 0.15)),
 			},
 			features: [
-				{ text: '8 blogs per month' },
+				{ text: '4 blogs per month' },
 				{ text: 'Up to 50 keyword research queries' },
 				{ text: '1 competitor analysis' },
 				{ text: 'No blog templates' },
