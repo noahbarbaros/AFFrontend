@@ -76,7 +76,7 @@ const Navbar1 = () => {
       >
             <div className="flex items-center">
               <motion.div
-                className="mr-4"
+                className="mr-3"
                 initial={{ scale: 0.95 }}
                 animate={{ scale: 1 }}
                 whileHover={{ rotate: 4, scale: 1.03 }}
@@ -88,9 +88,20 @@ const Navbar1 = () => {
                   width={48}
                   height={48}
                   priority
-                  className="h-12 w-12 rounded-full object-cover"
+                  className="h-10 w-10 rounded-full object-cover"
                 />
               </motion.div>
+            </div>
+
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[47%]">
+              <Image
+                src="/header.png"
+                alt="Antifragility Labs"
+                width={750}
+                height={150}
+                priority
+                className="h-33 w-auto object-contain"
+              />
             </div>
             
             {/* Desktop CTA Buttons */}
