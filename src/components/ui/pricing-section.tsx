@@ -46,7 +46,7 @@ export default function PricingSectionComponent() {
 			],
 			btn: {
 				text: 'Get Started',
-				href: 'https://antifragility.app/',
+				href: 'https://dashboard.antifragility.app/',
 			},
 		},
 		{

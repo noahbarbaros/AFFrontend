@@ -97,14 +97,14 @@ const Navbar1 = () => {
               whileHover={{ scale: 1.05 }}
             >
               <a
-                href="https://antifragility.app/"
+                href="https://dashboard.antifragility.app/"
                 className="inline-flex items-center justify-center px-4 py-2 text-sm text-slate-900 rounded-full border border-slate-200/60 bg-white/60 hover:bg-white/80 transition-colors"
               >
                 Log In
               </a>
               <ShinyButton
                 className="!px-5 !py-2 !text-sm"
-                onClick={() => (window.location.href = "https://antifragility.app/")}
+                onClick={() => (window.location.href = 'https://dashboard.antifragility.app/')}
               >
                 Get Started
               </ShinyButton>
@@ -138,7 +138,7 @@ const Navbar1 = () => {
             </motion.button>
             <div className="flex flex-col space-y-4">
               <motion.a
-                href="https://antifragility.app/"
+                href="https://dashboard.antifragility.app/"
                 className="text-base text-slate-900 font-medium text-center rounded-full border border-slate-200/70 bg-white/70 py-3"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -158,7 +158,10 @@ const Navbar1 = () => {
               >
                 <ShinyButton
                   className="!w-full !px-5 !py-3 !text-base"
-                  onClick={() => (window.location.href = "https://antifragility.app/")}
+                  onClick={() => {
+                    toggleMenu()
+                    window.location.href = 'https://dashboard.antifragility.app/'
+                  }}
                 >
                   Get Started
                 </ShinyButton>
