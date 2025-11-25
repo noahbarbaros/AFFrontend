@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
@@ -37,12 +38,18 @@ export default function Navbar() {
 
       {/* Right side - CTA Buttons */}
       <div className="flex items-center gap-3 flex-shrink-0 z-10">
-        <button className="bg-[#1d40b0] text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-sm md:text-base hover:bg-[#1a3a9e] transition-colors duration-200">
+        <Link
+          href="https://dashboard.antifragility.app/"
+          className="bg-[#1d40b0] text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-sm md:text-base hover:bg-[#1a3a9e] transition-colors duration-200"
+        >
           Start free trial
-        </button>
-        <button className="text-black px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-sm md:text-base hover:bg-gray-100 transition-colors duration-200">
+        </Link>
+        <Link
+          href="https://dashboard.antifragility.app/"
+          className="text-black px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-sm md:text-base hover:bg-gray-100 transition-colors duration-200"
+        >
           Log in
-        </button>
+        </Link>
       </div>
     </nav>
   );

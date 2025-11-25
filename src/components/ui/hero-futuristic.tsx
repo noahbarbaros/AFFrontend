@@ -6,6 +6,7 @@ import { useMemo, useRef, useState, useEffect } from 'react';
 import * as THREE from 'three/webgpu';
 import { bloom } from 'three/examples/jsm/tsl/display/BloomNode.js';
 import { ArrowDown } from 'lucide-react';
+import Link from 'next/link';
 import { ShinyButton } from "@/components/ui/shiny-button";
 
 import {
@@ -285,12 +286,20 @@ const HeroFuturistic = () => {
               transitionDelay: buttonsVisible ? '0.2s' : '0s'
             }}
           >
-            <ShinyButton className="!px-5 !py-2.5 md:!px-6 md:!py-3 !text-sm md:!text-base w-full sm:w-auto">
-              Start free trial
-            </ShinyButton>
-            <button className="text-black px-5 py-2.5 md:px-6 md:py-3 rounded-full font-medium text-sm md:text-base hover:bg-gray-100 transition-colors duration-200 w-full sm:w-auto">
+            <Link
+              href="https://dashboard.antifragility.app/"
+              className="inline-block w-full sm:w-auto"
+            >
+              <ShinyButton className="!px-5 !py-2.5 md:!px-6 md:!py-3 !text-sm md:!text-base w-full sm:w-auto">
+                Start free trial
+              </ShinyButton>
+            </Link>
+            <Link
+              href="https://dashboard.antifragility.app/"
+              className="text-black px-5 py-2.5 md:px-6 md:py-3 rounded-full font-medium text-sm md:text-base hover:bg-gray-100 transition-colors duration-200 w-full sm:w-auto inline-flex items-center justify-center"
+            >
               Log in
-            </button>
+            </Link>
           </div>
         </div>
       </div>
