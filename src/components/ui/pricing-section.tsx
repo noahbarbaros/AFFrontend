@@ -23,7 +23,7 @@ export default function PricingSectionComponent() {
 			],
 			btn: {
 				text: 'Start Free Trial',
-				href: 'https://dashboard.antifragility.app/',
+				href: 'https://dashboard.antifragility.io/',
 			},
 			betaNote: 'Beta launch: free to use',
 		},
@@ -47,7 +47,7 @@ export default function PricingSectionComponent() {
 			],
 			btn: {
 				text: 'Get Started',
-				href: 'https://dashboard.antifragility.app/',
+				href: 'https://dashboard.antifragility.io/',
 			},
 		},
 		{
