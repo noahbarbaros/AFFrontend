@@ -176,7 +176,7 @@ const RotatingAIName = () => {
 
   return (
     <span 
-      className="block min-w-[140px] text-left overflow-hidden relative"
+      className="block min-w-[100px] sm:min-w-[140px] text-left overflow-hidden relative"
       style={{ 
         height: '1.2em', 
         lineHeight: '1.2em'
@@ -250,7 +250,7 @@ const HeroFuturistic = () => {
       {/* Text Column - Left (Top on Mobile) */}
       <div className="flex flex-col justify-center px-4 sm:px-6 md:px-12 lg:px-20 py-8 md:py-0 relative z-10 h-full">
         <div className="text-left max-w-2xl">
-          <div className="text-2xl sm:text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold text-black tracking-tight leading-tight">
+          <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold text-black tracking-tight leading-tight">
             <div
               className={`transition-opacity duration-700 ${titleVisible ? 'opacity-100' : 'opacity-0'}`}
               style={{ fontFamily: 'sans-serif' }}
@@ -270,7 +270,7 @@ const HeroFuturistic = () => {
               </div>
             </div>
           </div>
-          <div className="text-xs md:text-xl xl:text-2xl 2xl:text-3xl mt-6 overflow-hidden text-black font-normal tracking-tight">
+          <div className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl mt-6 overflow-hidden text-black font-normal tracking-tight">
             <div
               className={`transition-opacity duration-700 ${subtitleVisible ? 'opacity-100' : 'opacity-0'}`}
               style={{ 
@@ -287,16 +287,16 @@ const HeroFuturistic = () => {
             }}
           >
             <Link
-              href="https://dashboard.antifragility.app/"
+              href="https://dashboard.antifragility.io/"
               className="inline-block w-full sm:w-auto"
             >
-              <ShinyButton className="!px-5 !py-2.5 md:!px-6 md:!py-3 !text-sm md:!text-base w-full sm:w-auto">
+              <ShinyButton className="!px-5 !py-3 md:!px-6 md:!py-3 !text-sm md:!text-base w-full sm:w-auto min-h-[44px]">
                 Start free trial
               </ShinyButton>
             </Link>
             <Link
-              href="https://dashboard.antifragility.app/"
-              className="text-black px-5 py-2.5 md:px-6 md:py-3 rounded-full font-medium text-sm md:text-base hover:bg-gray-100 transition-colors duration-200 w-full sm:w-auto inline-flex items-center justify-center"
+              href="https://dashboard.antifragility.io/"
+              className="text-black px-5 py-3 md:px-6 md:py-3 rounded-full font-medium text-sm md:text-base hover:bg-gray-100 transition-colors duration-200 w-full sm:w-auto inline-flex items-center justify-center min-h-[44px]"
             >
               Log in
             </Link>
@@ -305,7 +305,7 @@ const HeroFuturistic = () => {
       </div>
 
       {/* Canvas Column - Right (Bottom on Mobile) */}
-      <div className="relative h-[40vh] sm:h-[50vh] md:h-full w-full flex items-center justify-center">
+      <div className="relative h-[50vh] sm:h-[60vh] md:h-full w-full flex items-center justify-center">
         <Canvas
           flat
           className="w-full h-full"

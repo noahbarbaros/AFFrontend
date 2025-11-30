@@ -39,13 +39,13 @@ export default function Navbar() {
       {/* Right side - CTA Buttons */}
       <div className="flex items-center gap-3 flex-shrink-0 z-10">
         <Link
-          href="https://antifragility.app/"
+          href="https://dashboard.antifragility.io/"
           className="bg-[#1d40b0] text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-sm md:text-base hover:bg-[#1a3a9e] transition-colors duration-200"
         >
           Start free trial
         </Link>
         <Link
-          href="https://antifragility.app/"
+          href="https://dashboard.antifragility.io/"
           className="text-black px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-sm md:text-base hover:bg-gray-100 transition-colors duration-200"
         >
           Log in

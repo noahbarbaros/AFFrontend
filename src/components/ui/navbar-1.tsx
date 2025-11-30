@@ -97,21 +97,21 @@ const Navbar1 = () => {
               whileHover={{ scale: 1.05 }}
             >
               <a
-                href="https://dashboard.antifragility.app/"
-                className="inline-flex items-center justify-center px-4 py-2 text-sm text-slate-900 rounded-full border border-slate-200/60 bg-white/60 hover:bg-white/80 transition-colors"
+                href="https://dashboard.antifragility.io/"
+                className="inline-flex items-center justify-center px-4 py-2.5 text-sm text-slate-900 rounded-full border border-slate-200/60 bg-white/60 hover:bg-white/80 transition-colors min-h-[44px]"
               >
                 Log In
               </a>
               <ShinyButton
-                className="!px-5 !py-2 !text-sm"
-                onClick={() => (window.location.href = 'https://dashboard.antifragility.app/')}
+                className="!px-5 !py-2.5 !text-sm min-h-[44px]"
+                onClick={() => (window.location.href = 'https://dashboard.antifragility.io/')}
               >
                 Get Started
               </ShinyButton>
             </motion.div>
 
             {/* Mobile Menu Button */}
-            <motion.button className="md:hidden flex items-center" onClick={toggleMenu} whileTap={{ scale: 0.9 }}>
+            <motion.button className="md:hidden flex items-center justify-center min-w-[44px] min-h-[44px]" onClick={toggleMenu} whileTap={{ scale: 0.9 }}>
               <Menu className="h-6 w-6 text-slate-900" />
             </motion.button>
       </motion.div>
@@ -138,8 +138,8 @@ const Navbar1 = () => {
             </motion.button>
             <div className="flex flex-col space-y-4">
               <motion.a
-                href="https://dashboard.antifragility.app/"
-                className="text-base text-slate-900 font-medium text-center rounded-full border border-slate-200/70 bg-white/70 py-3"
+                href="https://dashboard.antifragility.io/"
+                className="text-base text-slate-900 font-medium text-center rounded-full border border-slate-200/70 bg-white/70 py-3 min-h-[44px] flex items-center justify-center"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
@@ -157,10 +157,10 @@ const Navbar1 = () => {
                 className="w-full"
               >
                 <ShinyButton
-                  className="!w-full !px-5 !py-3 !text-base"
+                  className="!w-full !px-5 !py-3 !text-base !min-h-[44px]"
                   onClick={() => {
                     toggleMenu()
-                    window.location.href = 'https://dashboard.antifragility.app/'
+                    window.location.href = 'https://dashboard.antifragility.io/'
                   }}
                 >
                   Get Started

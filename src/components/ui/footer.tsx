@@ -237,7 +237,7 @@ export default function StickyFooter() {
                     scale: 1.02,
                     transition: { type: "spring", stiffness: 300, damping: 20 },
                   }}
-                  className="text-[10vw] sm:text-[8vw] md:text-[10vw] lg:text-[8vw] xl:text-[6vw] leading-[1.1] font-serif bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900/60 bg-clip-text text-transparent cursor-default pb-2"
+                  className="text-4xl sm:text-6xl md:text-8xl lg:text-[10vw] xl:text-[8vw] 2xl:text-[6vw] leading-[1.1] font-serif bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900/60 bg-clip-text text-transparent cursor-default pb-2"
                   style={{ paddingBottom: '0.25rem' }}
                 >
                   {footerData.title}

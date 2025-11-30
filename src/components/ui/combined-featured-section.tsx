@@ -68,7 +68,7 @@ export default function CombinedFeaturedSection() {
                   iconClassName: "text-blue-500",
                   titleClassName: "text-blue-500",
                   className:
-                    "[grid-area:stack] hover:-translate-y-8 max-sm:hover:-translate-y-4 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/40 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                    "[grid-area:stack] translate-x-0 sm:translate-x-0 hover:-translate-y-8 max-sm:hover:-translate-y-4 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/40 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
                 },
                 {
                   icon: <Sparkles className="size-4 text-blue-300" />,
@@ -78,7 +78,7 @@ export default function CombinedFeaturedSection() {
                   iconClassName: "text-blue-500",
                   titleClassName: "text-blue-500",
                   className:
-                    "[grid-area:stack] translate-x-6 translate-y-6 sm:translate-x-12 sm:translate-y-8 hover:-translate-y-2 max-sm:hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/40 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                    "[grid-area:stack] translate-x-0 translate-y-0 sm:translate-x-6 sm:translate-y-6 md:translate-x-12 md:translate-y-8 hover:-translate-y-2 max-sm:hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/40 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
                 },
                 {
                   icon: <Sparkles className="size-4 text-blue-300" />,
@@ -88,7 +88,7 @@ export default function CombinedFeaturedSection() {
                   iconClassName: "text-blue-500",
                   titleClassName: "text-blue-500",
                   className:
-                    "[grid-area:stack] translate-x-12 translate-y-10 sm:translate-x-24 sm:translate-y-16 hover:translate-y-6 sm:hover:translate-y-8",
+                    "[grid-area:stack] translate-x-0 translate-y-0 sm:translate-x-12 sm:translate-y-10 md:translate-x-24 md:translate-y-16 hover:translate-y-6 sm:hover:translate-y-8",
                 },
               ]}
             />
@@ -140,7 +140,7 @@ type FeatureCardProps = {
 
 function FeatureCard({ icon, image, title, subtitle, description }: FeatureCardProps) {
   return (
-    <div className="relative flex flex-col gap-2 sm:gap-3 border border-gray-200 bg-white p-3 sm:p-4 shadow-sm transition overflow-hidden pb-32 sm:pb-4">
+    <div className="relative flex flex-col gap-2 sm:gap-3 border border-gray-200 bg-white p-3 sm:p-4 shadow-sm transition overflow-hidden pb-4">
       <div className="relative z-10">
         <span className="mb-4 flex items-center gap-2 text-xs font-medium text-gray-500">
           {icon}
@@ -150,7 +150,7 @@ function FeatureCard({ icon, image, title, subtitle, description }: FeatureCardP
         <p className="text-xs sm:text-sm text-gray-600">{description}</p>
       </div>
 
-      <div className="mt-4 h-40 w-full overflow-hidden rounded-xl sm:absolute sm:bottom-3 sm:right-3 sm:h-40 sm:w-48 md:h-48 md:w-60 lg:h-56 lg:w-72">
+      <div className="mt-4 h-40 w-full overflow-hidden rounded-xl sm:absolute sm:bottom-3 sm:right-3 sm:h-40 sm:w-48 md:h-48 md:w-60 lg:h-56 lg:w-72 max-w-full">
         <div className="relative h-full w-full">
           <Image
             src={image}
@@ -302,7 +302,7 @@ const chartConfig = {
 
 function MonitoringChart() {
   return (
-    <ChartContainer className="h-60 w-full" config={chartConfig}>
+    <ChartContainer className="h-48 sm:h-60 md:h-72 w-full" config={chartConfig}>
       <AreaChart data={chartData}>
         <defs>
           <linearGradient id="fillVolume" x1="0" y1="0" x2="0" y2="1">

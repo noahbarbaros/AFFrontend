@@ -66,7 +66,7 @@ export default function FAQSection() {
 								className="group border-b-2 border-gray-200 last:border-b-0 [&_summary::-webkit-details-marker]:hidden"
 								open={index === 0}
 							>
-								<summary className="flex w-full cursor-pointer items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left hover:bg-gray-50 transition-colors">
+								<summary className="flex w-full cursor-pointer items-center justify-between px-4 sm:px-6 md:px-6 py-4 sm:py-5 text-left hover:bg-gray-50 transition-colors">
 									<span className="text-sm sm:text-base md:text-lg font-normal text-gray-900 pr-4">
 										{faq.question}
 									</span>

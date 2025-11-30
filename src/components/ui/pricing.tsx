@@ -74,7 +74,7 @@ export function PricingSection({
 					</p>
 				)}
 			</div>
-			<div className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3">
+			<div className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:gap-6 md:gap-8 md:grid-cols-3">
 				{plans.map((plan) => (
 					<PricingCard plan={plan} key={plan.name} />
 				))}
@@ -241,7 +241,7 @@ export function PricingCard({
 						<Button
 							type="button"
 							className={cn(
-								"w-full py-3 text-base font-medium",
+								"w-full py-3 text-base font-medium min-h-[44px]",
 								plan.highlighted 
 									? "bg-[#1d40b0] text-white hover:bg-[#1a3a9e] hover:text-white" 
 									: "bg-white border-gray-300 text-gray-900 hover:bg-gray-50 hover:text-gray-900"
@@ -264,7 +264,7 @@ export function PricingCard({
 				) : (
 				<Button
 					className={cn(
-						"w-full py-3 text-base font-medium",
+						"w-full py-3 text-base font-medium min-h-[44px]",
 						plan.highlighted 
 								? "bg-[#1d40b0] text-white hover:bg-[#1a3a9e] hover:text-white" 
 								: "bg-white border-gray-300 text-gray-900 hover:bg-gray-50 hover:text-gray-900"
