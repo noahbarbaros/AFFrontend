@@ -17,7 +17,7 @@ export default function Home() {
       {/* Navbar temporarily removed */}
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-8 -mt-4 md:-mt-6">
         {/* Hero Section Frame */}
-        <div className="border-t border-l border-r border-gray-200 min-h-[500px] sm:min-h-[550px] md:min-h-[600px] h-[calc(100vh-60px)] sm:h-[calc(100vh-80px)] md:h-[calc(100vh-100px)] bg-white flex relative overflow-hidden">
+        <div className="border-t border-l border-r border-gray-200 min-h-[650px] sm:min-h-[550px] md:min-h-[600px] h-auto sm:h-[calc(100vh-80px)] md:h-[calc(100vh-100px)] bg-white flex relative overflow-hidden">
           <HeroFuturistic />
         </div>
         

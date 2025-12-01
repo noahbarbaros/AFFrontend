@@ -27,7 +27,7 @@ export default function TrustedBy() {
               alt="Y Combinator"
               width={200}
               height={60}
-              className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+              className="h-24 sm:h-28 md:h-28 lg:h-32 w-auto max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
             />
           </div>
 
@@ -43,7 +43,7 @@ export default function TrustedBy() {
           </div>
 
           {/* betaworks */}
-          <div className="flex items-center justify-center group px-2 sm:px-4">
+          <div className="flex items-center justify-center group px-2 sm:px-4 -mt-2 sm:-mt-3">
             <Image
               src="/betaworks.png"
               alt="betaworks"
