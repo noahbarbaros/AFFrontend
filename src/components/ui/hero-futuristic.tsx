@@ -94,13 +94,10 @@ const Scene = () => {
     uniforms.uPointer.value = pointer;
   });
 
-  // Responsive scale factor logic
-  // On mobile (small width), we scale down to fit. 
-  // Base scale 0.8 is good for desktop.
-  // viewport.width is in 3D units. On mobile, it might be small.
-  // Let's adjust scale based on width.
-  const isMobile = viewport.width < 5; // Approximate threshold
-  const responsiveScale = isMobile ? 0.5 : 0.8;
+  // Responsive scale factor - scales proportionally with viewport width
+  // On mobile, scale down aggressively to fit within container
+  const baseScale = 0.8;
+  const responsiveScale = viewport.width < 5 ? Math.max(viewport.width / 12, 0.35) : baseScale;
 
   return (
     <mesh 
@@ -305,7 +302,7 @@ const HeroFuturistic = () => {
       </div>
 
       {/* Canvas Column - Right (Bottom on Mobile) */}
-      <div className="relative h-[55vh] sm:h-[60vh] md:h-full w-full flex items-center justify-center py-4 sm:py-0">
+      <div className="relative h-[55vh] sm:h-[60vh] md:h-full w-full flex items-center justify-center py-4 sm:py-0 overflow-hidden">
         <Canvas
           flat
           className="w-full h-full"
