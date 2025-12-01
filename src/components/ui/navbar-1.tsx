@@ -68,29 +68,29 @@ const Navbar1 = () => {
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
     >
       <motion.div
-        className="flex items-center justify-between px-6 py-3 rounded-full w-full max-w-3xl relative z-10 border"
+        className="flex items-center justify-between px-3 sm:px-4 md:px-6 h-14 sm:h-16 md:h-20 rounded-full w-full max-w-3xl relative z-10 border"
         variants={glassVariants}
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
         transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
       >
-            <div className="flex items-center">
-            </div>
-
-            <div className="absolute left-1/8 top-1/2 -translate-x-1/2 -translate-y-[47%]">
-              <Image
-                src="/header.png"
-                alt="Antifragility Labs"
-                width={750}
-                height={150}
-                priority
-                className="h-33 w-auto object-contain"
-              />
+            <div className="flex items-center flex-shrink-0 relative z-20">
+              <div className="flex items-center">
+                <img
+                  src="/header.png"
+                  alt="Antifragility Labs"
+                  style={{ 
+                    height: '125px',
+                    width: 'auto',
+                    display: 'block'
+                  }}
+                />
+              </div>
             </div>
             
             {/* Desktop CTA Buttons */}
             <motion.div
-              className="hidden md:flex items-center space-x-3"
+              className="hidden md:flex items-center space-x-2 lg:space-x-3 flex-shrink-0"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
@@ -98,12 +98,12 @@ const Navbar1 = () => {
             >
               <a
                 href="https://dashboard.antifragility.io/"
-                className="inline-flex items-center justify-center px-4 py-2.5 text-sm text-slate-900 rounded-full border border-slate-200/60 bg-white/60 hover:bg-white/80 transition-colors min-h-[44px]"
+                className="inline-flex items-center justify-center px-3 lg:px-4 py-2.5 text-sm text-slate-900 rounded-full border border-slate-200/60 bg-white/60 hover:bg-white/80 transition-colors min-h-[44px]"
               >
                 Log In
               </a>
               <ShinyButton
-                className="!px-5 !py-2.5 !text-sm min-h-[44px]"
+                className="!px-4 lg:!px-5 !py-2.5 !text-sm min-h-[44px]"
                 onClick={() => (window.location.href = 'https://dashboard.antifragility.io/')}
               >
                 Get Started
@@ -111,7 +111,7 @@ const Navbar1 = () => {
             </motion.div>
 
             {/* Mobile Menu Button */}
-            <motion.button className="md:hidden flex items-center justify-center min-w-[44px] min-h-[44px]" onClick={toggleMenu} whileTap={{ scale: 0.9 }}>
+            <motion.button className="md:hidden flex items-center justify-center min-w-[44px] min-h-[44px] flex-shrink-0" onClick={toggleMenu} whileTap={{ scale: 0.9 }}>
               <Menu className="h-6 w-6 text-slate-900" />
             </motion.button>
       </motion.div>

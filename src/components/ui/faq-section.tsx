@@ -54,7 +54,7 @@ export default function FAQSection() {
 						Frequently Asked Questions
 					</h2>
 					<p className="text-gray-600 text-center text-xs sm:text-sm md:text-base px-4">
-						Everything you need to know about our pricing and plans. Further questions? Contact us at hello@aflabs.ai
+						Everything you need to know about our pricing and plans. Further questions? Contact us at hello@antifragility.io
 					</p>
 				</div>
 

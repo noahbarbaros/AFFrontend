@@ -74,7 +74,7 @@ const footerData = {
       title: "Company", 
       links: [
         { text: "About Us", href: "https://medium.com/@noahbarbaros/the-secret-master-plan-of-antifragility-labs-just-between-us-f4c518681df6" },
-        { text: "Contact", href: "mailto:hello@aflabs.ai" }
+        { text: "Contact", href: "mailto:hello@antifragility.io" }
       ] 
     },
     { 
@@ -91,7 +91,7 @@ const footerData = {
   title: "Antifragility",
   subtitle: "Generative Engine Optimization",
   copyright: `©${new Date().getFullYear()} Antifragility Labs. All rights reserved.`,
-  email: "hello@aflabs.ai",
+  email: "hello@antifragility.io",
 }
 
 // Reusable components
@@ -233,10 +233,6 @@ export default function StickyFooter() {
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1, duration: 0.8, ease: "easeOut" as const }}
-                  whileHover={{
-                    scale: 1.02,
-                    transition: { type: "spring", stiffness: 300, damping: 20 },
-                  }}
                   className="text-4xl sm:text-6xl md:text-8xl lg:text-[10vw] xl:text-[8vw] 2xl:text-[6vw] leading-[1.1] font-serif bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900/60 bg-clip-text text-transparent cursor-default pb-2"
                   style={{ paddingBottom: '0.25rem' }}
                 >

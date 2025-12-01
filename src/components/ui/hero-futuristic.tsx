@@ -250,13 +250,13 @@ const HeroFuturistic = () => {
       {/* Text Column - Left (Top on Mobile) */}
       <div className="flex flex-col justify-center px-4 sm:px-6 md:px-12 lg:px-20 py-8 md:py-0 relative z-10 h-full">
         <div className="text-left max-w-2xl">
-          <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold text-black tracking-tight leading-tight">
+          <div className="text-5xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold text-black tracking-tight leading-tight">
             <div
               className={`transition-opacity duration-700 ${titleVisible ? 'opacity-100' : 'opacity-0'}`}
               style={{ fontFamily: 'sans-serif' }}
             >
               <div 
-                className="text-xs md:text-sm xl:text-base 2xl:text-lg font-normal mb-4 md:mb-6 uppercase tracking-[0.2em]"
+                className="text-sm sm:text-base md:text-sm xl:text-base 2xl:text-lg font-normal mb-4 md:mb-6 uppercase tracking-[0.2em]"
                 style={{ 
                   color: '#1d40b0',
                   letterSpacing: '0.2em'

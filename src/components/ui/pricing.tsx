@@ -139,7 +139,8 @@ export function PricingCard({
 		<div
 			key={plan.name}
 			className={cn(
-				'relative flex w-full flex-col rounded-lg border border-gray-200 bg-white overflow-hidden min-h-0',
+				'relative flex w-full flex-col rounded-lg border border-gray-200 overflow-hidden min-h-0',
+				plan.highlighted ? 'bg-gray-50' : 'bg-white',
 				className,
 			)}
 			{...props}
@@ -155,8 +156,8 @@ export function PricingCard({
 			)}
 			<div
 				className={cn(
-					'bg-white rounded-t-lg border-b p-4 sm:p-6',
-					plan.highlighted && 'bg-gray-50',
+					'rounded-t-lg border-b p-4 sm:p-6',
+					plan.highlighted ? 'bg-gray-50' : 'bg-white',
 				)}
 			>
 				<div className="absolute top-3 right-3 z-10 flex items-center gap-2">
@@ -175,7 +176,7 @@ export function PricingCard({
 					reinforce that the listed price is waived.
 				*/}
 				<h3 className="mt-3 sm:mt-4 flex items-end gap-1">
-					{plan.name === 'Enterprise' ? (
+					{plan.name === 'Agency / Enterprise' ? (
 						<span className="text-3xl sm:text-4xl font-normal text-gray-900">Custom</span>
 					) : (
 						<span
@@ -200,8 +201,8 @@ export function PricingCard({
 			</div>
 			<div
 				className={cn(
-					'bg-white space-y-4 sm:space-y-5 px-4 sm:px-6 py-6 sm:py-8 text-sm sm:text-base',
-					plan.highlighted && 'bg-gray-50',
+					'space-y-4 sm:space-y-5 px-4 sm:px-6 py-6 sm:py-8 text-sm sm:text-base',
+					plan.highlighted ? 'bg-gray-50' : 'bg-white',
 				)}
 			>
 				{plan.features.map((feature, index) => (
@@ -232,8 +233,8 @@ export function PricingCard({
 			</div>
 			<div
 				className={cn(
-					'mt-auto w-full border-t p-4 sm:p-5 bg-white',
-					plan.highlighted && 'bg-gray-50',
+					'mt-auto w-full border-t p-4 sm:p-5',
+					plan.highlighted ? 'bg-gray-50' : 'bg-white',
 				)}
 			>
 				{plan.btn.isCalendly ? (

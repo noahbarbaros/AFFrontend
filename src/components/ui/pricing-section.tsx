@@ -52,8 +52,8 @@ export default function PricingSectionComponent() {
 		},
 		{
 			id: 'custom',
-			name: 'Enterprise',
-			info: 'For large organizations',
+			name: 'Agency / Enterprise',
+			info: 'Designed for enterprise or agency use — individually or together',
 			price: {
 				monthly: 999,
 				yearly: Math.round(999 * 12 * (1 - 0.15)),
@@ -61,7 +61,10 @@ export default function PricingSectionComponent() {
 			features: [
 				{ text: 'Everything in Professional, plus:' },
 				{ text: 'Custom limits' },
-				{ text: 'White-glove onboarding' },
+				{ text: 'Custom integrations built specifically for your workflow' },
+				{ text: 'Dedicated GEO & SEO specialists for your team' },
+				{ text: 'Prioritized features on product roadmap' },
+				{ text: 'SLA guarantees & dedicated support channels' },
 				{ text: 'Enterprise support' },
 			],
 			btn: {
