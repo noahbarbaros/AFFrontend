@@ -305,7 +305,7 @@ const HeroFuturistic = () => {
       </div>
 
       {/* Canvas Column - Right (Bottom on Mobile) */}
-      <div className="relative h-[50vh] sm:h-[60vh] md:h-full w-full flex items-center justify-center">
+      <div className="relative h-[55vh] sm:h-[60vh] md:h-full w-full flex items-center justify-center py-4 sm:py-0">
         <Canvas
           flat
           className="w-full h-full"
